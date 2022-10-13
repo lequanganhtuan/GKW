@@ -31,8 +31,7 @@ if(isset($_POST["categoryhome"])){
             
             
 			echo "
-					
-                    
+
 			
                     
 			";
