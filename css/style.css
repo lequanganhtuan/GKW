@@ -2071,7 +2071,7 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 .footer-payments li a {
-  color: #15161D;
+  /* color: #15161D; */
   font-size: 36px;
   display: block;
 }

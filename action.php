@@ -7,10 +7,8 @@ if(isset($_POST["category"])){
     
 	$run_query = mysqli_query($con,$category_query) or die(mysqli_error($con));
 	echo "
-		
-            
             <div class='aside'>
-							<h3 class='aside-title'>Categories</h3>
+							<h3 class='aside-title'>Danh Mục</h3>
 							<div class='btn-group-vertical'>
 	";
 	if(mysqli_num_rows($run_query) > 0){

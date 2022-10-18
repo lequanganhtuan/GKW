@@ -10,6 +10,6 @@ include "header.php";
 </div>
 </section>	
 <?php
-include "newslettter.php";
+// include "newslettter.php";
 include "footer.php";
 ?>

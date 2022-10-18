@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 ?>
-     <script id="jsbin-javascript">
+    <script id="jsbin-javascript">
 (function (global) {
 	if(typeof (global) === "undefined")
 	{

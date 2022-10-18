@@ -16,7 +16,7 @@ if(isset($_POST["categoryhome"])){
 					<!-- NAV -->
 					<ul class='main-nav nav navbar-nav'>
                     <li class='active'><a href='index.php'>Trang chủ</a></li>
-                    <li><a href='store.php'>Thiết bị điện</a></li>
+                    <li><a href='store.php'>Danh Mục</a></li>
 	";
 	if(mysqli_num_rows($run_query) > 0){
 		while($row = mysqli_fetch_array($run_query)){
@@ -32,7 +32,7 @@ if(isset($_POST["categoryhome"])){
             
 			echo "
 
-			
+			<li class='categoryhome' cid='$cid'><a href='store.php'>$cat_name</a></li>
                     
 			";
 		}
@@ -67,6 +67,7 @@ if(isset($_POST["getProducthome"])){
 	}else{
 		$start = 0;
 	}
+	
 	$product_query = "SELECT * FROM products,categories WHERE product_cat=cat_id LIMIT $start,$limit";
 	$run_query = mysqli_query($con,$product_query);
 	if(mysqli_num_rows($run_query) > 0){

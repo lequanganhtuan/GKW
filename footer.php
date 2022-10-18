@@ -7,7 +7,7 @@
 					<div class="row">
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">About Us</h3>
+								<h3 class="footer-title">Về chúng tôi</h3>
 								
 								<ul class="footer-links">
 									<li><a href="#"><i class="fa fa-map-marker"></i>address</a></li>
@@ -34,13 +34,13 @@
 
 						<div class="col-md-3 col-xs-6">
 							<div class="footer">
-								<h3 class="footer-title">Categories</h3>
+								<h3 class="footer-title">Danh Mục</h3>
 								<ul class="footer-links">
-									<li><a href="#">Mobiles</a></li>
-									<li><a href="#">Men</a></li>
-									<li><a href="#">Women</a></li>
-									<li><a href="#">Kids</a></li>
-									<li><a href="#">Accessories</a></li>
+									<li><a href="#">Điện thoại</a></li>
+									<li><a href="#">Laptop</a></li>
+									<li><a href="#">Màn hình</a></li>
+									<li><a href="#">Chuột</a></li>
+									<li><a href="#">Tai nghe</a></li>
 								</ul>
 							</div>
 						</div>
