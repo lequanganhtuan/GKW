@@ -151,7 +151,7 @@ if(isset($_POST["getProduct"])){
 	}
 }
 
-
+// Tim kiem
 if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isset($_POST["search"])){
 	if(isset($_POST["get_seleted_Category"])){
 		$id = $_POST["cat_id"];
@@ -300,7 +300,7 @@ if (isset($_POST["count_item"])) {
 
 //Get Cart Item From Database to Dropdown menu
 if (isset($_POST["Common"])) {
-
+	//keep uid
 	if (isset($_SESSION["uid"])) {
 		//When user is logged in this query will execute
 		$sql = "SELECT a.product_id,a.product_title,a.product_price,a.product_image,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.user_id='$_SESSION[uid]'";
@@ -308,13 +308,14 @@ if (isset($_POST["Common"])) {
 		//When user is not logged in this query will execute
 		$sql = "SELECT a.product_id,a.product_title,a.product_price,a.product_image,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.ip_add='$ip_add' AND b.user_id < 0";
 	}
+
 	$query = mysqli_query($con,$sql);
 	if (isset($_POST["getCartItem"])) {
 		//display cart item in dropdown menu
 		if (mysqli_num_rows($query) > 0) {
 			$n=0;
 			$total_price=0;
-			while ($row=mysqli_fetch_array($query)) {
+			while ($row= mysqli_fetch_array($query)) {
                 
 				$n++;
 				$product_id = $row["product_id"];
@@ -337,8 +338,6 @@ if (isset($_POST["Common"])) {
 												</div>
 												
 											</div>'
-                    
-                    
                     ;
 				
 			}
@@ -357,7 +356,7 @@ if (isset($_POST["Common"])) {
 	}
 	
     
-    
+    //check out detail
     if (isset($_POST["checkOutDetails"])) {
 		if (mysqli_num_rows($query) > 0) {
 			//display user cart item with "Ready to checkout" button if user is not login
@@ -365,13 +364,13 @@ if (isset($_POST["Common"])) {
 			<div class="table-responsive">
 			<form method="post" action="login_form.php">
 			
-	               <table id="cart" class="table table-hover table-condensed" id="">
-    				<thead>
+				<table id="cart" class="table table-hover table-condensed" id="">
+					<thead>
 						<tr>
-							<th style="width:50%">Product</th>
-							<th style="width:10%">Price</th>
-							<th style="width:8%">Quantity</th>
-							<th style="width:7%" class="text-center">Subtotal</th>
+							<th style="width:50%">Sản phẩm</th>
+							<th style="width:10%">Giá</th>
+							<th style="width:8%">Số lượng</th>
+							<th style="width:7%" class="text-center">Tổng</th>
 							<th style="width:10%"></th>
 						</tr>
 					</thead>
@@ -389,7 +388,6 @@ if (isset($_POST["Common"])) {
 
 					echo 
 						'
-                             
 						<tr>
 							<td data-th="Product" >
 								<div class="row">
@@ -399,7 +397,7 @@ if (isset($_POST["Common"])) {
 									</div>
 									<div class="col-sm-6">
 										<div style="max-width=50px;">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+										<p>'.$product_title.'</p>
 										</div>
 									</div>
 									
@@ -430,7 +428,7 @@ if (isset($_POST["Common"])) {
 				<tfoot>
 					
 					<tr>
-						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Quay lại mua</a></td>
 						<td colspan="2" class="hidden-xs"></td>
 						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
 						<div id="issessionset"></div>
@@ -440,7 +438,7 @@ if (isset($_POST["Common"])) {
 				if (!isset($_SESSION["uid"])) {
 					echo '
 					
-							<a href="" data-toggle="modal" data-target="#Modal_register" class="btn btn-success">Ready to Checkout</a></td>
+							<a href="" data-toggle="modal" data-target="#Modal_register" class="btn btn-success">Tiếp tục thanh toán</a></td>
 								</tr>
 							</tfoot>
 				
@@ -454,7 +452,6 @@ if (isset($_POST["Common"])) {
 							<input type="hidden" name="cmd" value="_cart">
 							<input type="hidden" name="business" value="shoppingcart@puneeth.com">
 							<input type="hidden" name="upload" value="1">';
-							  
 							$x=0;
 							$sql = "SELECT a.product_id,a.product_title,a.product_price,a.product_image,b.id,b.qty FROM products a,cart b WHERE a.product_id=b.p_id AND b.user_id='$_SESSION[uid]'";
 							$query = mysqli_query($con,$sql);
@@ -464,9 +461,9 @@ if (isset($_POST["Common"])) {
 
 									'<input type="hidden" name="total_count" value="'.$x.'">
 									<input type="hidden" name="item_name_'.$x.'" value="'.$row["product_title"].'">
-								  	 <input type="hidden" name="item_number_'.$x.'" value="'.$x.'">
-								     <input type="hidden" name="amount_'.$x.'" value="'.$row["product_price"].'">
-								     <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
+								  	<input type="hidden" name="item_number_'.$x.'" value="'.$x.'">
+								    <input type="hidden" name="amount_'.$x.'" value="'.$row["product_price"].'">
+								    <input type="hidden" name="quantity_'.$x.'" value="'.$row["qty"].'">';
 								}
 							  
 							echo   
