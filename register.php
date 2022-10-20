@@ -20,16 +20,16 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		
 		echo "
 			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>PLease Fill all fields..!</b>
+				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Hãy nhập toàn bộ các hàng !</b>
 			</div>
 		";
 		exit();
 	} else {
-		if(!preg_match($name,$f_name)){
+		if(!preg_match($name,$f_name)){ //so sanh bieu thuc chinh quy
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $f_name is not valid..!</b>
+				<b>Tên $f_name không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -38,7 +38,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $l_name is not valid..!</b>
+				<b>Họ $l_name không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -47,7 +47,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $email is not valid..!</b>
+				<b>Email $email không hợp lệ..!</b>
 			</div>
 		";
 		exit();
@@ -56,7 +56,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Password is weak</b>
+				<b>Mật khẩu yếu</b>
 			</div>
 		";
 		exit();
@@ -74,7 +74,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>password is not same</b>
+				<b>Mật khẩu không khớp</b>
 			</div>
 		";
 	}
@@ -82,7 +82,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number $mobile is not valid</b>
+				<b>SĐT $mobile không hợp lệ</b>
 			</div>
 		";
 		exit();
@@ -91,11 +91,12 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-warning'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number must be 10 digit</b>
+				<b>SĐT chưa đúngt</b>
 			</div>
 		";
 		exit();
 	}
+
 	//existing email address in our database
 	$sql = "SELECT user_id FROM user_info WHERE email = '$email' LIMIT 1" ;
 	$check_query = mysqli_query($con,$sql);
@@ -104,7 +105,7 @@ if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empt
 		echo "
 			<div class='alert alert-danger'>
 				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Email Address is already available Try Another email address</b>
+				<b>Email đã được đăng ký</b>
 			</div>
 		";
 		exit();

@@ -12,6 +12,6 @@ if(isset($BackToMyPage)) {
 } else {
     header('Location: index.php'); // default page
 }
-   
+
 
 ?>

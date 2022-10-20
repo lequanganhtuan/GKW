@@ -2,6 +2,7 @@
 session_start();
 $ip_add = getenv("REMOTE_ADDR");
 include "db.php";
+// bang danh muc 
 if(isset($_POST["category"])){
 	$category_query = "SELECT * FROM categories";
     
@@ -91,6 +92,8 @@ if(isset($_POST["page"])){
 		";
 	}
 }
+
+// Lay san pham
 if(isset($_POST["getProduct"])){
 	$limit = 9;
 	if(isset($_POST["setPage"])){
@@ -216,7 +219,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 	}
 	
 
-
+// them vao gio hang
 	if(isset($_POST["addToCart"])){
 		
 
@@ -234,7 +237,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 			echo "
 				<div class='alert alert-warning'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is already added into the cart Continue Shopping..!</b>
+						<b>Sản phẩm đã có trong giỏ hàng</b>
 				</div>
 			";//not in video
 		} else {
@@ -245,7 +248,7 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 				echo "
 					<div class='alert alert-success'>
 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-						<b>Product is Added..!</b>
+						<b>Sản phẩm đã được thêm vào giỏ hàng</b>
 					</div>
 				";
 			}
@@ -428,9 +431,11 @@ if (isset($_POST["Common"])) {
 				<tfoot>
 					
 					<tr>
-						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Quay lại mua</a></td>
+						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Quay lại mua </a></td>
 						<td colspan="2" class="hidden-xs"></td>
-						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
+						<td class="hidden-xs text-center">
+						<b class="net_total"></b>
+						</td>
 						<div id="issessionset"></div>
                         <td>
 							

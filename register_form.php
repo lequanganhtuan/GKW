@@ -17,41 +17,41 @@
 								<form id="signup_form" onsubmit="return false" class="login100-form">
 									<div class="billing-details jumbotron">
                                     <div class="section-title">
-                                        <h2 class="login100-form-title p-b-49" >Register Here</h2>
+                                        <h2 class="login100-form-title p-b-49" >Đăng Ký</h2>
                                     </div>
                                     <div class="form-group ">
                                     
-                                        <input class="input form-control input-borders" type="text" name="f_name" id="f_name" placeholder="First Name">
+                                        <input class="input form-control input-borders" type="text" name="f_name" id="f_name" placeholder="Tên">
                                     </div>
                                     <div class="form-group">
                                     
-                                        <input class="input form-control input-borders" type="text" name="l_name" id="l_name" placeholder="Last Name">
+                                        <input class="input form-control input-borders" type="text" name="l_name" id="l_name" placeholder="Họ">
                                     </div>
                                     <div class="form-group">
                                         <input class="input form-control input-borders" type="email" name="email"  placeholder="Email">
                                     </div>
                                     <div class="form-group">
-                                        <input class="input form-control input-borders" type="password" name="password" id="password" placeholder="password">
+                                        <input class="input form-control input-borders" type="password" name="password" id="password" placeholder="Mật Khẩu">
                                     </div>
                                     <div class="form-group">
-                                        <input class="input form-control input-borders" type="password" name="repassword" id="repassword" placeholder="confirm password">
+                                        <input class="input form-control input-borders" type="password" name="repassword" id="repassword" placeholder="Xác Nhận Mật Khẩu">
                                     </div>
                                     <div class="form-group">
-                                        <input class="input form-control input-borders" type="text" name="mobile" id="mobile" placeholder="mobile">
+                                        <input class="input form-control input-borders" type="text" name="mobile" id="mobile" placeholder="SĐT">
                                     </div>
                                     <div class="form-group">
-                                        <input class="input form-control input-borders" type="text" name="address1" id="address1" placeholder="Address">
+                                        <input class="input form-control input-borders" type="text" name="address1" id="address1" placeholder="Địa chỉ ">
                                     </div>
                                     <div class="form-group">
-                                        <input class="input form-control input-borders" type="text" name="address2" id="address2" placeholder="City">
+                                        <input class="input form-control input-borders" type="text" name="address2" id="address2" placeholder="Tỉnh">
                                     </div>
                                     
                                     
                                     <div style="form-group">
-                                       <input class="primary-btn btn-block"  value="Sign Up" type="submit" name="signup_button">
+                                       <input class="primary-btn btn-block"  value="Đăng Ký" type="submit" name="signup_button">
                                     </div>
                                     <div class="text-pad">
-                                    <a href="" data-toggle="modal" data-target="#Modal_login">Already have an Account ? then login</a>
+                                    <a href="" data-toggle="modal" data-target="#Modal_login">Bạn đã có tài khoản thì đăng nhập</a>
                                        
                                     </div>
                                     

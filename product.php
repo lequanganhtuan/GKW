@@ -139,10 +139,10 @@ include "header.php";
 								<a class="review-link" href="#review-form">10 Review(s) | Add your review</a>
 							</div>
 							<div>
-								<h3 class="product-price">$'.$row['product_price'].'<del class="product-old-price">$990.00</del></h3>
+								<h3 class="product-price">'.$row['product_price']. ' VNĐ<del class="product-old-price">111990.00 VNĐ</del></h3>
 								<span class="product-available">In Stock</span>
 							</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p>'.$row['product_title'].'</p>
 
 							<div class="product-options">
 								<label>
@@ -152,16 +152,16 @@ include "header.php";
 									</select>
 								</label>
 								<label>
-									Color
+									Màu
 									<select class="input-select">
-										<option value="0">Red</option>
+										<option value="0">Đỏ</option>
 									</select>
 								</label>
 							</div>
 
 							<div class="add-to-cart">
 								<div class="qty-label">
-									Qty
+									Số lượng
 									<div class="input-number">
 										
 										<span class="qty-up">+</span>
@@ -169,7 +169,7 @@ include "header.php";
 									</div>
 								</div>
 								<div class="btn-group" style="margin-left: 25px; margin-top: 15px">
-								<button class="add-to-cart-btn" pid="'.$row['product_id'].'"  id="product" ><i class="fa fa-shopping-cart"></i> add to cart</button>
+								<button class="add-to-cart-btn" pid="'.$row['product_id'].'"  id="product" ><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</button>
                                 </div>
 								
 								
@@ -215,9 +215,9 @@ include "header.php";
 						<div id="product-tab">
 							<!-- product tab nav -->
 							<ul class="tab-nav">
-								<li class="active"><a data-toggle="tab" href="#tab1">Description</a></li>
-								<li><a data-toggle="tab" href="#tab2">Details</a></li>
-								<li><a data-toggle="tab" href="#tab3">Reviews (3)</a></li>
+								<li class="active"><a data-toggle="tab" href="#tab1">Mô tả</a></li>
+								<li><a data-toggle="tab" href="#tab2">Chi tiết</a></li>
+								<li><a data-toggle="tab" href="#tab3">Đánh giá (3)</a></li>
 							</ul>
 							<!-- /product tab nav -->
 
@@ -227,7 +227,7 @@ include "header.php";
 								<div id="tab1" class="tab-pane fade in active">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>'.$row['product_title'].'</p>
 										</div>
 									</div>
 								</div>
@@ -237,7 +237,7 @@ include "header.php";
 								<div id="tab2" class="tab-pane fade in">
 									<div class="row">
 										<div class="col-md-12">
-											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+											<p>'.$row['product_title'].'</p>
 										</div>
 									</div>
 								</div>
@@ -336,7 +336,7 @@ include "header.php";
 												<ul class="reviews">
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
+															<h5 class="name">A</h5>
 															<p class="date">27 DEC 2018, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
@@ -347,12 +347,12 @@ include "header.php";
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p> comment cho vui</p>
 														</div>
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
+															<h5 class="name">B</h5>
 															<p class="date">27 DEC 2018, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
@@ -363,12 +363,12 @@ include "header.php";
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p>comment cho vui</p>
 														</div>
 													</li>
 													<li>
 														<div class="review-heading">
-															<h5 class="name">John</h5>
+															<h5 class="name">C</h5>
 															<p class="date">27 DEC 2018, 8:0 PM</p>
 															<div class="review-rating">
 																<i class="fa fa-star"></i>
@@ -379,7 +379,7 @@ include "header.php";
 															</div>
 														</div>
 														<div class="review-body">
-															<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+															<p>comment cho vui</p>
 														</div>
 													</li>
 												</ul>
@@ -440,7 +440,7 @@ include "header.php";
                     
 					<div class="col-md-12">
 						<div class="section-title text-center">
-							<h3 class="title">Related Products</h3>
+							<h3 class="title">Sản phẩm khác</h3>
 							
 						</div>
 					</div>
@@ -497,7 +497,7 @@ include "header.php";
 										</div>
 									</div>
 									<div class='add-to-cart'>
-										<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> add to cart</button>
+										<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> Thêm vào giỏ hàng</button>
 									</div>
 								</div>
                                 </div>
