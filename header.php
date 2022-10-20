@@ -74,7 +74,7 @@
                         $row= mysqli_fetch_array($query);
                         
                         echo '
-                        <div class="dropdown">
+                        <div class="dropdownn">
                            <a href="#" class="dropdownn" data-toggle="modal" data-target="#myModal" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'</a>
                            <div class="dropdownn-content">
                            <a href="" data-toggle="modal" data-target="#profile"><i class="fa fa-user-circle" aria-hidden="true" ></i>Hồ sơ</a>
@@ -137,6 +137,7 @@
                            </a>
                            <div class="cart-dropdown"  >
                               <div class="cart-list" id="cart_product">
+                                 
                               </div>
                               <div class="cart-btns">
                                  <a href="cart.php" style="width:100%;"><i class="fa fa-edit"></i>Mở rộng</a>
